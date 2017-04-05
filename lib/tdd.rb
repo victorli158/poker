@@ -6,4 +6,15 @@ class Array
     end
     new_arr
   end
+
+  def two_sum
+    new_arr = []
+    (0...length - 1).each do |start_idx|
+      (start_idx + 1...length).each do |end_idx|
+        new_arr << [start_idx, end_idx] if self[start_idx] + self[end_idx] == 0
+      end
+    end
+    new_arr
+  end
+
 end
