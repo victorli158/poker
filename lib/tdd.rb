@@ -17,4 +17,14 @@ class Array
     new_arr
   end
 
+  def my_transpose
+    new_matrix = Array.new(length) { [] }
+    (0..(length - 1)).each do |idx|
+      each do |row|
+        new_matrix[idx] << row[idx]
+      end
+    end
+    new_matrix
+  end
+
 end
